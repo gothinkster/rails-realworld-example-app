@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
 
     resource :user, only: [:show, :update]
+
+    resources :profiles, param: :username, only: [:show]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
