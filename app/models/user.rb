@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
 
+  acts_as_follower
+  acts_as_followable
+
+
   validates :username, uniqueness: { case_sensitive: true },
                        format: { with: /\A[a-zA-Z0-9]+\z/ },
                        presence: true,

@@ -13,6 +13,16 @@ class ArticlesController < ApplicationController
     @articles = @articles.order(created_at: :desc).offset(params[:offset] || 0).limit(params[:limit] || 20)
   end
 
+  def feed
+    @articles = Article.includes(:user).where(user: current_user.following_users)
+
+    @articles_count = @articles.count
+
+    @articles = @articles.order(created_at: :desc).offset(params[:offset] || 0).limit(params[:limit] || 20)
+
+    render :index
+  end
+
   def create
     @article = Article.new(article_params)
     @article.user = current_user

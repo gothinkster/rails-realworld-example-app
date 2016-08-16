@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712061113) do
+ActiveRecord::Schema.define(version: 20160712061614) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -47,6 +47,19 @@ ActiveRecord::Schema.define(version: 20160712061113) do
 
   add_index "favorites", ["article_id"], name: "index_favorites_on_article_id"
   add_index "favorites", ["user_id"], name: "index_favorites_on_user_id"
+
+  create_table "follows", force: :cascade do |t|
+    t.integer  "followable_id",                   null: false
+    t.string   "followable_type",                 null: false
+    t.integer  "follower_id",                     null: false
+    t.string   "follower_type",                   null: false
+    t.boolean  "blocked",         default: false, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "follows", ["followable_id", "followable_type"], name: "fk_followables"
+  add_index "follows", ["follower_id", "follower_type"], name: "fk_follows"
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
