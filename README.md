@@ -2,7 +2,7 @@
 
 > Example Rails codebase that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) API spec.
 
-This repo is functionality complete -- PR's and issues welcome!
+This repo is functionality complete -- PRs and issues welcome!
 
 # Getting started
 
