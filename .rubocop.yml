@@ -1,0 +1,12 @@
+Rails:
+  Enabled: true
+AllCops:
+  AutoCorrect: true
+  TargetRubyVersion: 2.4.0
+  Include:
+    - '**/Gemfile'
+    - '**/Rakefile'
+  Exclude:
+   - 'bin/*'
+   - 'db/seeds.rb'
+   - 'db/schema.rb'
