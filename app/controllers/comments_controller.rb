@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   before_action :find_article!
@@ -31,6 +33,6 @@ class CommentsController < ApplicationController
   end
 
   def find_article!
-    @article = Article.find_by_slug!(params[:article_slug])
+    @article = Article.find_by!(slug: params[:article_slug])
   end
 end
