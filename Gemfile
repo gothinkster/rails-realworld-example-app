@@ -17,7 +17,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on'
 gem 'acts_as_follower'
-gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
+gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'jwt', '~> 1.5.4'
 gem 'puma'
 gem 'rack-cors', '~> 0.4.0'
