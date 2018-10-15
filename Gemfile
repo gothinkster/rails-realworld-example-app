@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '2.4.0'
+ruby '2.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.1.0'
+gem 'rails', '5.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -17,10 +17,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on'
 gem 'acts_as_follower'
-gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
+gem 'devise'
 gem 'jwt', '~> 1.5.4'
 gem 'puma'
-gem 'rack-cors', '~> 0.4.0'
+gem 'rack-cors', require: 'rack/cors'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::API
+  respond_to :json
+
   include ActionController::HttpAuthentication::Token::ControllerMethods
 
   before_action :configure_permitted_parameters, if: :devise_controller?
