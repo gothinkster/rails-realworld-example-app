@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from acts_as_taggable_on_engine (originally 1)
-class ActsAsTaggableOnMigration < ActiveRecord::Migration
+class ActsAsTaggableOnMigration < ActiveRecord::Migration[5.1]
   def self.up
     create_table :tags do |t|
       t.string :name
@@ -22,7 +22,6 @@ class ActsAsTaggableOnMigration < ActiveRecord::Migration
       t.datetime :created_at
     end
 
-    add_index :taggings, :tag_id
     add_index :taggings, %i[taggable_id taggable_type context]
   end
 
