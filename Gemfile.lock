@@ -89,7 +89,7 @@ GEM
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
     pkg-config (1.1.7)
-    puma (3.4.0)
+    puma (3.12.4)
     rack (1.6.4)
     rack-cors (0.4.0)
     rack-test (0.6.3)
@@ -172,7 +172,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jwt (~> 1.5.4)
-  puma
+  puma (~> 3.4)
   rack-cors (~> 0.4.0)
   rails (= 4.2.6)
   sass-rails (~> 5.0)
@@ -184,4 +184,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.6
+   1.17.3
