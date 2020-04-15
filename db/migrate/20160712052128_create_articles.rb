@@ -4,6 +4,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string :title
       t.string :slug
       t.text :body
+      t.integer :position
       t.string :description
       t.integer :favorites_count
       t.references :user, index: true, foreign_key: true

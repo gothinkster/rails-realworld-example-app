@@ -7,7 +7,9 @@ class Article < ActiveRecord::Base
   scope :favorited_by, -> (username) { joins(:favorites).where(favorites: { user: User.where(username: username) }) }
 
   acts_as_taggable
+  acts_as_list scope: :favorites
 
+  
   validates :title, presence: true, allow_blank: false
   validates :body, presence: true, allow_blank: false
   validates :slug, uniqueness: true, exclusion: { in: ['feed'] }
