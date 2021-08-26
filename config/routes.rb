@@ -16,6 +16,10 @@ Rails.application.routes.draw do
       get :feed, on: :collection
     end
 
+    resources :pull_requests, param: :id, except: [:edit ] do
+      get :open, on: :collection
+    end
+
     resources :tags, only: [:index]
   end
 
